@@ -9,7 +9,7 @@ module.exports = {
     head: [['link', {rel: 'icon', href: '/favicon.jpg'}]],
     plugins: [
         docsearchPlugin({
-            apiKey: 'fef475d7eb2e155d48d59cec831d799b',
+            apiKey: '8adf9b5a9690b3fdafcc2467f8d5467a',
             indexName: 'scareye',
             // 如果 Algolia 没有为你提供 `appId` ，使用 `BH4D9OD16A` 或者移除该配置项
             appId: '2BHALOOIXH',
@@ -46,7 +46,7 @@ module.exports = {
             },
             {
                 text: 'Haruka_Guild',
-                link: '/haruka/',
+                link: '/haruka_guild/',
             },
         ],
 
@@ -97,7 +97,6 @@ module.exports = {
                     children: [
                         "/mchelp/other/online",
                         "/mchelp/other/mod",
-                        "/mchelp/other/online",
                         "/mchelp/other/shadow_material",
                         "/mchelp/other/another",
                     ]
@@ -116,17 +115,25 @@ module.exports = {
                 '/mgc/author_says',
             ],
             '/mc_qq/': [
+                '/mc_qq/README.md',
+                {
+                    text: '安装',
+                    children: [
+                        '/mc_qq/install/README.md',
+                        '/mc_qq/install/plugin',
+                        '/mc_qq/install/mcrcon_plugin',
+                        '/mc_qq/install/mcrcon',
+                        '/mc_qq/install/config',
+                    ]
+                },
+                '/mc_qq/about',
+                '/mc_qq/update',
+            ],
+            '/haruka_guild/': [
                 'README.md',
                 'install',
-                'about',
                 'update',
             ],
-            '/haruka/': [
-                'README.md',
-                'install',
-                'update',
-            ],
-
         },
     }),
 }
