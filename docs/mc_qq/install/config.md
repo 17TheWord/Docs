@@ -3,41 +3,92 @@
 ## NoneBot2
 
 ::: warning 注意！
-安装完插件后，请在机器人的 `src` 目录下创建名为 `mc_qq_config.py`、内容如下的配置文件  
-或 [从 GitHub 下载](https://github.com/17TheWord/nonebot-plugin-mcqq/releases/download/V0.0.5/mc_qq_config.py)，将文件复制到对应目录并修改
+安装完插件后，请在机器人的配置文件，如：`.env.dev` 中写入相关配置信息  
+添加配置项只需在 .env.* 文件最底下另起一行直接添加即可。
+
+::: details 示例（点我展开）
+
+```json
+MC_QQ_GROUP_LIST=[]
+MC_QQ_GUILD_LIST=[[]]
+MC_QQ_IP=""
+MC_QQ_WS_PORT=
+MC_QQ_MCRCON_PASSWORD=""
+MC_QQ_MCRCON_PORT=
+```
 :::
 
-```python
-# 在此填入服务器连接信息
+### MC_QQ_GROUP_LIST
 
-# 服务器IP
-mc_ip = "127.0.0.1"
-# 服务器 WebSocket 端口
-ws_port = "8765"
-# 服务器 MCRcon 密码，插件安装的用户可以删除此行
-mcrcon_password = "你的Rcon密码"
-# 服务器 MCRcon 端口，插件安装的用户可以删除此行
-mcrcon_port = 25575
+默认值：[]
 
+填写需要开启互通的群号
 
-# 开启功能的群和频道列表
-group_list = {
-    # 群列表
-    "group_list": [
-        # 群号
-        # 123456789,
-    ],
-    # 频道列表
-    "guild_list": [
-        # {
-            # # 频道 ID
-            # "guild_id": 12345678909876543,
-            # # 子频道 ID
-            # "channel_id": 1234567,
-        # },
-    ],
-}
+```json
+MC_QQ_GROUP_LIST=[QQ群号]
 ```
+
+---
+
+### MC_QQ_GUILD_LIST
+
+默认值：[[]]
+
+填写需要开启互通的群号
+
+```json
+MC_QQ_GUILD_LIST=[[频道ID,子频道ID]]
+```
+
+---
+
+### MC_QQ_IP
+
+默认值："127.0.0.1"
+
+MC 服务器 IP
+
+```json
+MC_QQ_IP="127.0.0.1"
+```
+
+---
+
+### MC_QQ_WS_PORT
+
+默认值：8765
+
+MC 服务器 WebSocket 端口（MC_QQ插件的端口）
+
+```json
+MC_QQ_WS_PORT=8765
+```
+
+---
+
+### MC_QQ_MCRCON_PASSWORD
+
+默认值：Null
+
+MC 服务器 Rcon 密码
+
+```json
+MC_QQ_MCRCON_PASSWORD=""
+```
+
+---
+
+### MC_QQ_MCRCON_PORT
+
+默认值：[]
+
+MC 服务器 Rcon 端口
+
+```json
+MC_QQ_MCRCON_PORT=25575
+```
+
+---
 
 ## Minecraft Server
 
@@ -48,7 +99,7 @@ group_list = {
 
 ```yaml
 # 是否启用插件
-# 默认为 true
+# 默认启用
 enable_mc_qq: true
 
 # 请在冒号后填写 WebSocket 服务的地址端口号。
@@ -59,10 +110,15 @@ websocket_hostname: 127.0.0.1
 websocket_port: 8765
 
 # 发送到群消息中，玩家昵称与消息之间的符号
-# 默认为中文冒号 “：”
+# 默认为 “说：”
 # 例如：
 #   17TheWord ： 你好
 say_way: "说："
+
+# 是否启用 玩家死亡事件监听
+# 开启后，当玩家死亡时，Bot会推送信息
+# 默认启用
+death_message: true
 
 # 是否启用 加入/离开 服务器监听
 # 开启后，当玩家 加入/离开 服务器时，Bot会随推送信息
@@ -71,4 +127,5 @@ say_way: "说："
 #   17TheWord 加入了服务器
 #   17TheWord 离开了服务器
 join_quit: true
+
 ```

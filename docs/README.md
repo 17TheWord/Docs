@@ -8,7 +8,7 @@
 
 - [MC_QQ](mc_qq/README.md)
 
-- [Haruka_Bot_Guild](haruka/README.md)
+- [HarukaBot_Guild](haruka_guild/README.md)
 
 - 仍在装修中
 

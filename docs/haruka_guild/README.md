@@ -4,9 +4,11 @@
 
 可以让 **HarukaBot** 适用于 **频道** 的方法。
 
-> 提示： 本补丁没有经过充分测试，不建议在生产环境使用，如果发现任何问题请自行解决。  
-> 或  
-> 提交[Issues](https://github.com/17TheWord/HarukaBot_Guild_Patch/issues/new) （因个人能力有限不保证百分百解决）。
+::: warning 注意
+本补丁没有经过充分测试，不建议在生产环境使用，如果发现任何问题请自行解决。  
+或  
+提交 [Issue](https://github.com/17TheWord/HarukaBot_Guild_Patch/issues/new) （因个人能力有限不保证百分百解决）。
+:::
 
 ---
 

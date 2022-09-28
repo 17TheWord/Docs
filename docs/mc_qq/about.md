@@ -1,5 +1,9 @@
 # 关于
 
+## 更新记录
+
+- 前往 [Releases](https://github.com/17TheWord/nonebot-plugin-mcqq/releases/) 查看
+
 ## NoneBot 端
 
 - 插件版需要 `websockets`

@@ -1,5 +1,7 @@
 # 更新 & 问题记录
 
+此处不再记录，请前往 [Releases](https://github.com/17TheWord/HarukaBot_Guild_Patch/releases) 查看
+
 ## *2022 / 8 / 22*
 
 - **新添加：**

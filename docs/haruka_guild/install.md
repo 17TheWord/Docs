@@ -12,22 +12,51 @@
 
 ### 下载
 
-- 前往 [Realeases](https://github.com/17TheWord/HarukaBot_Guild_Patch/releases) 下载补丁文件
+- 前往 [Releases](https://github.com/17TheWord/HarukaBot_Guild_Patch/releases) 下载补丁文件
 
 ---
 
 ### 安装
 
-- 脚手架安装
-  - `pip install haruka_bot`
-  - `pip install nonebot-plugin-guild-patch`
-- NoneBot2 插件商店安装
-  - `pip install nb-cli`
-  - `nb plugin install haruka_bot`
-  - `nb plugin install nonebot-plugin-guild-patch`
+#### 脚手架安装
 
+<CodeGroup>
+  <CodeGroupItem title="pip">
+
+```shell
+# 安装 Haruka
+pip install haruka_bot
+
+# 安装频道适配补丁
+pip install nonebot-plugin-guild-patch
 ```
-#目录结构参考：
+
+  </CodeGroupItem>
+</CodeGroup>
+
+---
+
+#### NoneBot2 插件商店安装
+
+<CodeGroup>
+  <CodeGroupItem title="pip">
+
+```shell
+# 安装 nb-cli
+pip install nb-cli
+
+# 安装 Haruka、频道补丁
+nb plugin install haruka_bot
+nb plugin install nonebot-plugin-guild-patch
+```
+
+  </CodeGroupItem>
+</CodeGroup>
+
+---
+
+#### 目录结构参考：
+```
 
 📦 HarukaBot                             # Bot项目
 ├── 📂 haruka                            # Bot
